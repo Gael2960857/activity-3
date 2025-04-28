@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Iniciando la fase de pre-construcción..."
+      - echo "Ubicación actual: $CODEBUILD_SRC_DIR"
+      - echo "Listando el contenido del directorio:"
+      - ls -al
+  build:
+    commands:
+      - echo "Iniciando la fase de construcción..."
+      - echo "Construyendo la imagen de Docker..."
+      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
+      - echo "La imagen de Docker fue construida exitosamente: $IMAGE_REPO_NAME:$IMAGE_TAG"
+  post_build:
+    commands:
+      - echo "Iniciando la fase de post-construcción..."
+      - echo "Realizando push de la imagen de Docker a Amazon ECR..."
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - docker push $IMAGE_REPO_NAME:$IMAGE_TAG
+      - echo "La imagen de Docker fue pusheada exitosamente a $IMAGE_REPO_NAME:$IMAGE_TAG"
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no

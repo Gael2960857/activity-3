@@ -1,0 +1,106 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Encabezado */
+.encabezado {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.encabezado h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+}
+
+.encabezado h4 {
+    text-align: center;
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+/* Proyectos */
+.proyecto {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto h3 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.proyecto h4 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.proyecto img {
+    display: block;
+    max-width: 100%;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+/* Contacto */
+.contacto {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contacto h3 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.contacto h4 {
+    margin: 5px 0;
+}
+
+/* Pie */
+.pie {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.pie a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
+
+/* Enlaces */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
